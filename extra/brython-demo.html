@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.0/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.0/brython_stdlib.js">
+    </script>
+	
+	<title>Brython demo</title>
+	<button id="demo">Click me for magic!</button>
+	
+</head>
+
+<body onload="brython()">
+
+<script type="text/python">
+from browser import *
+from browser.widgets.dialog import *
+def magic(e):
+    d = Dialog("Here's the magic:")
+    d.panel <= html.DIV("This code was made in python!")
+document["demo"].bind("click", magic)
+
+</script>
+
+
+</body>
+
+</html>
